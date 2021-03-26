@@ -12,20 +12,20 @@ package com.fu.math.unti.main;
 
     public class main {
  
-   public  static long  getFactorial(int n){
-            if( n<0 || n>20)
-                      throw new IllegalArgumentException("Invalid argurment "+"n must be between 0..20");
-            if(n==0||n==1)
-                           return 1;
-            long result = 1;
-            for(int i=2; i<=n; i++){
-                
-                result*=i;
-             
-         }
-                    
-        return result;
-   }
+//   public  static long  getFactorial(int n){
+//            if( n<0 || n>20)
+//                      throw new IllegalArgumentException("Invalid argurment "+"n must be between 0..20");
+//            if(n==0||n==1)
+//                           return 1;
+//            long result = 1;
+//            for(int i=2; i<=n; i++){
+//                
+//                result*=i;
+//             
+//         }
+//                    
+//        return result;
+//   }
         // Viết code xong là phải test code
         //Viết code là phải dùng hàm main để chạy 
         //Test từng Hàm từng class trước khi ráp chúng chung với các class khác
@@ -43,7 +43,14 @@ package com.fu.math.unti.main;
         //nhưng khốn nạn thay hàm trả về đúng 120-actual
         // hàm chạy đúng cho 5!
         //*sai: tui test 6!, expected=720,khốn nan thay, chạy ra actual=20,
-}
-    
-    
-
+        public  static long  getFactorial(int n){
+            if( n<0 || n>20)
+                      throw new IllegalArgumentException("Invalid argurment "+"n must be between 0..20");
+            if(n==0||n==1)
+                           return 1;
+            
+          
+          return n*getFactorial(n-1);
+   }
+    }
+     
